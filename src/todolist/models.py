@@ -46,6 +46,16 @@ class Project:
         self.name = name
         self.description = description
     
+    def to_dict(self) -> dict:
+        """Convert project to dictionary for serialization"""
+        return {
+            'id': self.id,
+            'name': self.name,
+            'description': self.description,
+            'created_at': self.created_at.isoformat(),
+            'tasks_count': len(self.tasks)
+        }
+    
     def __str__(self):
         return f"Project: {self.name} (Tasks: {len(self.tasks)})"
 
@@ -106,3 +116,4 @@ class Task:
     def __str__(self):
 
         return f"Task: {self.title} ({self.status})"
+
