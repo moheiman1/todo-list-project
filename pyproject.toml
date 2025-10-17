@@ -1,0 +1,10 @@
+[tool.poetry.scripts]
+todolist = "todolist.cli:main"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
