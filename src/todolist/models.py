@@ -1,6 +1,8 @@
 """
-All project models in one file
+ToDoList Models Module
+Contains Project and Task models with validation logic.
 """
+
 from datetime import datetime
 from typing import Optional
 
@@ -102,4 +104,5 @@ class Task:
         self.status = status
     
     def __str__(self):
+
         return f"Task: {self.title} ({self.status})"
